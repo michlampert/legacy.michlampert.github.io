@@ -1,5 +1,7 @@
 body{
     background-color: rgb(250, 248, 244);
+    left: 0px;
+    top: 0px
 }
 
 #background{
@@ -8,6 +10,10 @@ body{
     left: 0px;
     top: 0px;
     width: 100%;
+}
+
+#background > img {
+    max-width: 100%;
 }
 
 section {
