@@ -2,7 +2,6 @@ const hero = document.getElementById("hero")
 const sentence = document.getElementById("sentence")
 const cursor = document.getElementById("cursor")
 
-
 change_cursor_color = (flag) => {
     if(flag){
         cursor.style.color = "transparent"
@@ -17,12 +16,12 @@ setTimeout(() => {sentence.innerHTML = ""}, 0)
 // setTimeout(() => {sentence.style.color = "transparent"}, 0)
 
 
-setTimeout(() => {sentence.style.backgroundColor = "darkblue"}, 1000)
-setTimeout(() => {sentence.style.color = "white"}, 1000)
-setTimeout(() => {sentence.innerHTML = "O, wreszcie jesteś!"}, 1000)
+setTimeout(() => {sentence.style.backgroundColor = "#4444AA"}, 2000)
+setTimeout(() => {sentence.style.color = "white"}, 2000)
+setTimeout(() => {sentence.innerHTML = "O, wreszcie jesteś!"}, 2000)
 
-setTimeout(() => {sentence.style.backgroundColor = "transparent"}, 3000)
-setTimeout(() => {sentence.style.color = "black"}, 3000)
+setTimeout(() => {sentence.style.backgroundColor = "transparent"}, 4000)
+setTimeout(() => {sentence.style.color = "black"}, 4000)
 
 
 " Zapraszam :)".split("").forEach(
@@ -32,7 +31,7 @@ setTimeout(() => {sentence.style.color = "black"}, 3000)
             let text = document.createTextNode(letter);
             sentence.appendChild(text);
             // hero.appendChild(tag);
-        }, 3000 + index * 500 + Math.floor((Math.random()*500))
+        }, 4000 + index * 500 + Math.floor((Math.random()*500))
     )
 )
 
