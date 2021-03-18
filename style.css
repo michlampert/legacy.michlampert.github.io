@@ -49,7 +49,7 @@ nav{
 }
 
 header{
-    background-color: black;
+    background-color: rgb(41, 41, 41);
     position:fixed;
     left: 0;
     top: 0;
@@ -71,14 +71,17 @@ header{
     font-size: xx-large;
 }
 
+logo > *{
+    background-color: transparent;
+}
+
 #name2{
     /* margin-right: 0.5em; */
     width: 1.5em;
     color: white;
     overflow: hidden;
     opacity: 1;
-    transition: width 0.5s ease 0.5s;
-    transition: opacity 0.5s ease;
+    transition: width 0.5s ease, opacity 0.5s ease;
 }
 
 #git-icon{
@@ -86,8 +89,7 @@ header{
     color: white;
     overflow: hidden;
     opacity: 0;
-    transition: width 0.5s ease 0.5s;
-    transition: opacity 0.5s ease;
+    transition: width 0.5s ease,  opacity 0.3s ease;
 }
 
 #logo:hover > #name2 {
