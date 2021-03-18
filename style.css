@@ -37,19 +37,23 @@ nav{
 }
 
 #background{
-    position: absolute;
+    position: fixed;
     z-index: -1;
     left: 0px;
-    top: 0px;
+    /* top: 0px; */
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
 }
+
 
 #background > img {
     max-width: 100%;
 }
 
 header{
-    background-color: rgb(41, 41, 41);
+    background-color: rgba(30, 30, 30, 0.95);
     position:fixed;
     left: 0;
     top: 0;
@@ -133,4 +137,10 @@ section {
 #cursor{
     display: inline;
     margin: 0;
+}
+
+#hide{
+    position: fixed;
+    left: 5000px
+
 }
