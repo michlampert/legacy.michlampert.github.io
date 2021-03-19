@@ -1,8 +1,13 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body{
-    background-color: rgb(250, 248, 244);
+    background-color: rgb(0,0,0);
     left: 0px;
     top: 0px;
     font-family: 'Ubuntu Mono', monospace;
+    color: white;
 }
 
 a{
@@ -33,27 +38,40 @@ nav{
 
 .button:hover::after,
 .button:hover::before{
-    color: rgb(88, 188, 255);
+    color: rgb(204, 0, 0);
 }
 
 #background{
     position: fixed;
     z-index: -1;
-    left: 0px;
-    /* top: 0px; */
-    width: 100%;
-    height: 100%;
+    left: 50vw;
+    transform: translateX(-50%);
+    top: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
     object-fit: cover;
     pointer-events: none;
+    text-align: center;
+    justify-content: center;
+    background-color: black;
 }
 
-
 #background > img {
-    max-width: 100%;
+    /* min-width: 100vw; */
+    height: 140vh;
+}
+
+#background > div{
+    background: red;
+    height: 200px;
+    width: 100%;
+    position: relative;
+    top: -100px;
+    background: repeating-linear-gradient(to top, black, black 150px, transparent 200px);
 }
 
 header{
-    background-color: rgba(30, 30, 30, 0.95);
+    background-color: rgb(10,10,20);
     position:fixed;
     left: 0;
     top: 0;
@@ -64,6 +82,7 @@ header{
     align-items: center;
     justify-content: space-around;
     height: fit-content;
+    transition: background-color 0.5s ease;
 }
 
 #logo{
@@ -80,7 +99,6 @@ logo > *{
 }
 
 #name2{
-    /* margin-right: 0.5em; */
     width: 1.5em;
     color: white;
     overflow: hidden;
@@ -107,27 +125,28 @@ logo > *{
 }
 
 section {
-    min-height: 100vh;
+    min-height: 100vmin;
     margin: 0 10%;
-    background: rgba(255,0,0,0.5);
 }
 
 #home {
-    margin-top: 5vh;
     position: relative;
+    min-height: 100vh;
 }
 
 #hero{
     position: absolute;
-    top: 35vmin;
+    top: calc(55vh - 15vmin);
     left: 50%;
     transform: translateX(-50%);
+    
     /* width: fit-content; */
-    width: 70%;
-    font-size: 5rem;
+    width: 75%;
+    font-size: 10vmin;
     /* font-size: large; */
     font-weight: 800;
     text-align: center;
+    color: white;
 }
 
 #sentence{
@@ -142,5 +161,164 @@ section {
 #hide{
     position: fixed;
     left: 5000px
+}
 
+h2{
+    font-size: xx-large;
+}
+
+p{
+    font-size: medium;
+    text-align: justify;
+    letter-spacing: 1px;
+}
+#about{
+    display: flex;
+    /* flex-wrap: wrap; */
+    justify-content: space-evenly;
+    align-items:center;
+}
+
+#description{
+    /* max-width: 50%; */
+    width: 50vw;
+    flex-shrink: 1;
+    flex-grow: 1;
+    position: relative;
+    top: -50%;
+    padding: 5%;
+}
+
+#gallery{
+    /* max-width: 50%; */
+    width: 50vw;
+    flex-shrink: 1;
+    flex-grow: 1;
+    margin-top: 10vh;
+    position: relative;
+    height: fit-content;
+    /* padding: 5%; */
+}
+
+#outside{
+    position: absolute;
+    bottom: 0%;
+    left: 10%;
+    width: 100%;
+    height: 110%;
+    background: rgba(255, 70, 70, 0.4);
+}
+
+
+#image{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+/* #projects{
+    padding: 10%;
+}
+
+#grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5vw 5vh;
+    overflow: hidden;
+}
+
+.grid-item{
+    height: 300px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.grid-item > img {
+    width: 100%;
+    height: 200px;
+    display: block;
+    object-fit: fill;
+} */
+
+#contact{
+    display: grid;
+    grid-template-areas: "place place place" "gmail facebook git";
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    gap: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* padding: 10%; */
+    min-height: 95vh;
+}
+
+#place{
+    grid-area: place;
+    font-size: 8vmin;
+    align-self: flex-end;
+}
+
+#gmail{
+    grid-area: gmail;
+    font-size: 10vmin;
+}
+
+#gmail:hover{
+    color: rgb(204, 0, 0);
+}
+
+#facebook{
+    grid-area: facebook;
+    font-size: 10vmin;
+}
+
+.icon-facebook-sign:hover{
+    color: rgb(0, 52, 165);
+}
+
+#git{
+    grid-area: git;
+    font-size: 10vmin;
+}
+
+.icon-github:hover{
+    color: rgb(172, 172, 172);
+}
+
+
+@media (max-width: 800px){
+    section{
+        /* background-color: #000; */
+        padding: 10vh 0 0 0;
+    }
+
+    #about{
+        flex-wrap: wrap;
+        padding-top: 0;
+    }
+
+    #about > *{
+        margin: 0;
+    }
+
+    #text{
+        font-size: small;
+    }
+
+    #gallery{
+        margin: 0;
+        padding: 0px;
+    }
+
+    #description{
+        padding: 0 0 10vh 0;
+        margin-bottom: 10vh;
+    }
+
+    /* #projects{
+        padding: 0;
+    } */
 }

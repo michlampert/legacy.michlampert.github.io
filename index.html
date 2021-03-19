@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Michał Lampert - Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -10,18 +11,20 @@
 </head>
 <body>
     <div id="background">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/PKiN_widziany_z_WFC.jpg" alt="">
+        <img src="images/bg2.JPG" alt="">
+        <div></div>
     </div>
-    <header>
+    <header id="header">
         <a href="http://github.com/michlampert">
             <div id="logo">
                 <div id="git-icon"><i class="icon-github"></i></div><div id="name">mich</div><div id="name2">ał</div><div id="surname">lampert</div>
             </div>
         </a>
         <nav>
-            <a class="button" href="#about">about</a>
-            <a class="button" href="#projects">projects</a>
-            <a class="button" href="#contact">contact</a>
+            <a class="button" href="#home">home</a>
+            <a class="button" href="#about">o mnie</a>
+            <!-- <a class="button" href="#projects">projekty</a> -->
+            <a class="button" href="#contact">kontakt</a>
         </nav>
     </header>
     <section id="home">
@@ -30,19 +33,67 @@
         </div>
     </section>
     <section id="about">
-        <h2>O mnie</h2>
+        <div id="description">
+            <h2>O mnie</h2>
+            <p id="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi voluptates quasi eius, quas repellat delectus sapiente omnis maiores dolorem totam natus at, ad odio odit quos quam veniam a deserunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Error perferendis, cum accusantium magni eos nobis iste cumque dolor tempore quis animi repudiandae aliquam, excepturi culpa consectetur ea ducimus sed doloremque? Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde beatae, perferendis aspernatur architecto adipisci similique vel corporis, dolorem sed alias et doloremque minus voluptates cumque explicabo accusamus ab quam atque! Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, possimus aspernatur. Deserunt quo dolor at earum dolores odio aspernatur sit, totam nisi assumenda placeat recusandae dolore explicabo inventore vero expedita.
+            </p>
+        </div>
+        <div id="gallery">
+            <div id="outside">
+                <!-- <div id="inside"></div> -->
+            </div>
+            <img id="image" src="images/books.jpg" alt="">  
+        </div>
     </section>
-    <section id="projects">
+    <!-- <section id="projects">
         <h2>Niektóre projekty</h2>
-    </section>
+        <div id="grid-container">
+            <div class="grid-item">
+                <h3>opis</h3>
+                <img src="books.jpg" alt="">
+                <a href="github.com/michlampert" class="button">zobacz</a>
+            </div>
+            <div class="grid-item">
+                <h3>opis</h3>
+                <img src="books3.jpg" alt="">
+                <a href="github.com/michlampert" class="button">zobacz</a>
+            </div>
+            <div class="grid-item">
+                <h3>opis</h3>
+                <img src="books.jpg" alt="">
+                <a href="github.com/michlampert" class="button">zobacz</a>
+            </div>
+            <div class="grid-item">
+                <h3>opis</h3>
+                <img src="books3.jpg" alt="">
+                <a href="github.com/michlampert" class="button">zobacz</a>
+            </div>
+            <div class="grid-item">
+                <h3>opis</h3>
+                <img src="books2.jpg" alt="">
+                <a href="github.com/michlampert" class="button">zobacz</a>
+            </div>
+        </div>
+    </section> -->
     <section id="contact">
-        <h2>Odezwij się!</h2>
+        <div id="place">Odezwij się!</div>
+        <div id="gmail"><i class="icon-envelope-alt"></i></div>
+        <div id="facebook"><a href="https://www.facebook.com/michlampert"><i class="icon-facebook-sign"></i></a></div>
+        <div id="git">
+            <a href="https://github.com/michlampert/">
+                <i class="icon-github"></i>
+            </a>
+        </div>
     </section>
     <footer>
         <p>created by Michał Lampert</p>
     </footer>
-    <script src="app.js"></script>
-    <script src="parallax.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/parallax.js"></script>
+    <script src="js/about.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/mail.js"></script>
     <div id="hide">
         <p>Michał Lampert</p>
         <p>Michał Lampert</p>
